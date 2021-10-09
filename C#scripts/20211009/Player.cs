@@ -8,12 +8,12 @@ using UnityEngine.SceneManagement;
     public float jumpPower = 0;
     public AudioClip jumpSE; //20210107 추가
     public AudioClip deadSE; //20210107 추가
-    AudioSource playeSE; //20210107 추가
-    GameObject jumpScoreUi; //20211008추가
+    AudioSource playSE; //20210107 추가
+    GameObject jumpScoeUi; //20211008추가
 
     void Start()
     {
-        this.playeSE = GetComponent<AudioSource>(); //20210107 추가
+        this.playSE = GetComponent<AudioSource>(); //20210107 추가
         this.jumpScoreUi = GameObject.Find("JumpDirector"); //20211008 추가
     }
 
@@ -23,7 +23,7 @@ using UnityEngine.SceneManagement;
         if (Input.GetButtonDown("Jump"))
         {
             //GetComponent<AudioSource>().Play(); //점프를 하면 소리가 난다.(2021.10.07추가)
-            this.playeSE.PlayOneShot(this.jumpSE); //20210107 추가
+            this.playSE.PlayOneShot(this.jumpSE); //20210107 추가
             GetComponent<Rigidbody>().velocity = new Vector3(0, jumpPower, 0);
             this.jumpScoreUi.GetComponent<JumpScore>().GetJumpPoint(); 
 
