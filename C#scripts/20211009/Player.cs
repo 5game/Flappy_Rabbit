@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
     public AudioClip jumpSE; //20210107 추가
     public AudioClip deadSE; //20210107 추가
     AudioSource playSE; //20210107 추가
-    GameObject jumpScoeUi; //20211008추가
+    GameObject jumpScoreUi; //20211008추가
 
     void Start()
     {
